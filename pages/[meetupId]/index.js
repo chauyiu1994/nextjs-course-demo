@@ -35,8 +35,7 @@ export const getStaticPaths = async () => {
 
   return {
     // indicate that if fallback should be happened if path does not exist, otherwise 404
-    fallback: false,
-
+    fallback: 'blocking',
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
